@@ -82,14 +82,7 @@ export default {
     },
     edit_car(car) {
       this.axios
-        .put("https://testapi.io/api/dartya/resource/cardata/" + car.id, {
-          name: car.name,
-          image: car.image,
-          // for custom json-server
-          // desc: car.desc,
-          details: car.details,
-          price: car.price,
-        })
+        .put("https://testapi.io/api/dartya/resource/cardata/" + car.id,car)
         .then((response) => {
           if (response.status === 200) {
             this.getData();
