@@ -15,7 +15,7 @@
                 {{ check_price(car.price) }}
             </button>
             <div class="edit_delete_btn_container">
-                <button type="button" class="car-edit-btn" id="edit" @click="toggle_edit_popup(car,$event)">
+                <button type="button" class="car-edit-btn" id="edit" @click="set_btn_txt(car.id,$event)">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                         <path
@@ -33,20 +33,14 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            car_obj:{}
-        }
-    },
     props: ["car"],
-    emits: ["show_price","toggle_edit_popup","delete_alert"],
+    emits: ["show_price","set_btn_txt","delete_alert"],
     methods: {
         show_price(price, name) {
             this.$emit("show_price", price, name);
         },
-        toggle_edit_popup(car,e){
-            this.car_obj=car
-            this.$emit("toggle_edit_popup",this.car_obj,e);
+        set_btn_txt(id,e){
+            this.$emit("set_btn_txt",id,e);
         },
         check_price(price) {
             if (!price) {
