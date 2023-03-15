@@ -124,7 +124,6 @@ export default {
         add_car() {
             if (!this.is_valid && this.validate_form()) {
                 if (confirm("Add this car entry??")) {
-                    this.car_obj.id = this.length + 1;
                     this.$emit("add_car", this.car_obj);
                 }
             }
