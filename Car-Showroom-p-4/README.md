@@ -1,7 +1,7 @@
 # Car-Showroom
 
 this is car showroom that has CRUD functionalities and uses external APi with axios.<br>
-live demo: https://lustrous-sprinkles-ba3608.netlify.app/
+live demo: https://preeminent-eclair-70d6eb.netlify.app/
 
 ## Recommended IDE Setup
 
