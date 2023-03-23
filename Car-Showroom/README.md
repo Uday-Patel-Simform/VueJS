@@ -1,6 +1,6 @@
 # Car-Showroom
 
-live demo: https://comfy-zabaione-c2dacf.netlify.app/
+live demo: https://aesthetic-pudding-08e1f7.netlify.app/
 
 ## Recommended IDE Setup
 
