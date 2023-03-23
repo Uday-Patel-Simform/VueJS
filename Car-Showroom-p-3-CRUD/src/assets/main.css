@@ -18,7 +18,7 @@
 }
 
 .car-form-popup {
-  width: 30%;
+  width: 500px;
   background-color: #ffffff;
   padding: 20px;
   padding-top: 10px;
@@ -98,4 +98,9 @@
 
 .btn:hover {
   border: 2px solid #000000;
+}
+@media (max-width: 673px) {
+  .car-form-popup {
+    width: 80%;
+  }
 }
