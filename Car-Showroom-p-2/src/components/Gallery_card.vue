@@ -109,7 +109,7 @@ export default {
 
 @media (max-width: 400px) {
     .gallery_card {
-        width: 70%;
+        width: 90%;
         margin: 10px 0;
     }
 
