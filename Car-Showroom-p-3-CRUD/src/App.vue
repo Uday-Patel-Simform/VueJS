@@ -9,14 +9,13 @@
     <car_form
       v-if="car_popup_toggle"
       :btn_txt="form_btn_txt"
-      :length="cars.length"
       :car="edit_car_obj"
       @add_car="add_car"
       @edit_car="edit_car"
       @toggle_popup="toggle_popup"
-    ></car_form>
+    />
     <div class="content_container">
-      <div v-for="car in cars" :key="car.id">
+      <div class="car-card" v-for="car in cars" :key="car.id">
         <card
           :car="car"
           @show_price="dis_price"
@@ -192,7 +191,6 @@ export default {
       this.car_popup_toggle = !this.car_popup_toggle;
     },
     add_car(car) {
-      console.log(car.id);
       this.cars.push(car);
       let price = "";
       if (!car.price) {
@@ -211,10 +209,9 @@ export default {
       this.toggle_popup();
     },
     edit_car(car) {
-      this.cars.forEach((c, index) => {
-        if (c.id == car.id) {
-          this.cars[index] = car;
-          let price = "";
+      const index = this.cars.findIndex(c => c.id === car.id)
+      this.cars[index] = car;
+      let price = "";
           if (!car.price) {
             price = "Available Soon";
           } else price = car.price + "/- ₹";
@@ -228,8 +225,6 @@ export default {
               "\n\n Price: " +
               price
           );
-        }
-      });
       this.toggle_popup();
     },
     delete_alert(car) {
@@ -291,5 +286,18 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+@media (max-width:673px){
+  .car-card{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .add_btn_container {
+  justify-content: center;
+  padding: 0;
+}
 }
 </style>
