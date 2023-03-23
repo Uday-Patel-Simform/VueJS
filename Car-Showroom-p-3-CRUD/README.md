@@ -1,7 +1,7 @@
 # Car-Showroom
 
 Car Showroom app with CRUD functionalities and custom form validation<br>
-live demo: http://localhost:5173/
+live demo: https://spectacular-liger-5405fe.netlify.app/
 
 ## Recommended IDE Setup
 
