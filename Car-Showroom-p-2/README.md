@@ -1,6 +1,6 @@
 # Car-Showroom
 
-live demo: https://legendary-liger-60af83.netlify.app/
+live demo: https://starlit-hotteok-1ec7b2.netlify.app/
 
 ## Recommended IDE Setup
 
