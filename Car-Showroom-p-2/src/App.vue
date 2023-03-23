@@ -2,7 +2,7 @@
   <Nav></Nav>
   <section class="gallery_display">
     <div class="content_container">
-      <div v-for="car in cars" :key="car.id">
+      <div class = "car-card" v-for="car in cars" :key="car.id">
         <card :car="car" @show_price="dis_price" />
       </div>
     </div>
@@ -164,5 +164,14 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+@media (max-width:673px){
+  .car-card{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>
