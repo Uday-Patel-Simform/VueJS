@@ -9,14 +9,13 @@
     <car_form
       v-if="car_popup_toggle"
       :btn_txt="form_btn_txt"
-      :length="cars.length"
       :id="edit_car_id"
       @add_car="add_car"
       @edit_car="edit_car"
       @toggle_popup="toggle_popup"
-    ></car_form>
+    />
     <div class="content_container">
-      <div v-for="car in cars" :key="car.id">
+      <div class="car-card" v-for="car in cars" :key="car.id">
         <card
           :car="car"
           @show_price="dis_price"
@@ -172,5 +171,19 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width:673px){
+  .car-card{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .add_btn_container {
+  justify-content: center;
+  padding: 0;
+}
 }
 </style>
