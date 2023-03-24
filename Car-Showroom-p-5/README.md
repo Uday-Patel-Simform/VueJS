@@ -1,7 +1,7 @@
 # Car-showroom-p-5
 
 This a car-showroom app which has basic CRUD functions, routing capabilities of SPA and user registration and login functionalities.<br>
-Live demo: https://warm-sawine-b317ec.netlify.app/
+Live demo: https://relaxed-squirrel-e1aa38.netlify.app/
 
 ## Recommended IDE Setup
 
