@@ -170,11 +170,12 @@ body {
   margin: 50px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 @media (max-width:673px){
+  
   .car-card{
     width: 90%;
     display: flex;
