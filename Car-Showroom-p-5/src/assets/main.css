@@ -1,3 +1,4 @@
+
 #app {
   display: flex;
   flex-direction: column;
@@ -101,17 +102,19 @@
   align-items: center;
   justify-content: center;
   width: 150px;
-  border: 1px solid #7853ff;
+  border: 1px solid #41B883;
   height: 40px;
   font-size: 20px;
-  background-color: #7853ff;
+  background-color: #41B883;
   color: #ffffff;
   border-radius: 0.2rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  border: 2px solid #000000;
+  background-color: transparent;
+  color: #41B883;
+  border: 2px solid #41B883;
 }
 
 .form-container {
@@ -123,6 +126,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .form-container form {
   border: 1px solid #c5c5c5;
