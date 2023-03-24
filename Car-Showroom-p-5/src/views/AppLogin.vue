@@ -82,7 +82,9 @@ export default {
                 .then((response) => {
                     if(response.status == 200) {
                         this.$router.push({name:'home'})
-                    }else alert('Invalid email or password')
+                    }
+                }).catch((e)=>{
+                    alert(e)
                 })
         },
         handel_submit() {
