@@ -11,7 +11,7 @@
         </div>
         <div class="car-price-btn-container">
             <button type="button" @click="show_price(car.price, car.name)" :disabled="!car.price"
-                :class="{ btn_disabled: !car.price }" class="car-price-btn">{{ check_price(car.price) }}</button>
+                :class="{ btn_disabled: !car.price }" class="car-price-btn">{{ car.price ? 'INFO' : 'Available Soon' }}</button>
         </div>
     </div>
 </template>
@@ -23,13 +23,6 @@ export default {
         show_price(price, name) {
             this.$emit('show_price', price, name)
         },
-        check_price(price) {
-            if (!price) {
-                return 'Available Soon!' 
-            } else {
-                return 'INFO'
-            }
-        }
     }
 }
 </script>
