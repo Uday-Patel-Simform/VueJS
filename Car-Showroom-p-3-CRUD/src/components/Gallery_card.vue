@@ -12,7 +12,7 @@
         <div class="car-card-btn-container">
             <button type="button" @click="show_price(car.price, car.name)" :disabled="!car.price"
                 :class="{ btn_disabled: !car.price }" class="car-price-btn">
-                {{ check_price(car.price) }}
+                {{ car.price ? 'INFO' : 'Available Soon' }}
             </button>
             <div class="edit_delete_btn_container">
                 <button type="button" class="car-edit-btn" id="edit" @click="set_btn_txt(car.id,$event)">
