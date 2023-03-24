@@ -34,6 +34,8 @@ export default {
     height: 70px;
     margin-bottom: 30px;
     font-size: 25px;
+    background-color: #34495E;
+    
 }
 .navbar{
     width: 85%;
@@ -44,7 +46,7 @@ export default {
     margin-left: 20px;
     font-size: 35px;
     text-decoration: none;
-    color: #000000;
+    color:  #41B883;
     font-weight: 600;
 }
 
@@ -52,19 +54,19 @@ export default {
     text-decoration: none;
     border-bottom: 2px solid transparent;
     padding-bottom: 2px;
-    color: #000000;
+    color: #ffff;
     margin-left: 20px;
 }
 
 .app-nav .nav-links a:hover {
     transition: all 0.2s ease-in-out;
-    color: #00a2ff;
-    border-bottom: 2px solid #00a2ff;
+    color: #41B883;
+    border-bottom: 2px solid  #41B883;
 }
 
 .active_nav_link {
-    color: #00a2ff !important;
-    border-bottom: 2px solid #00a2ff !important;
+    color:  #41B883 !important;
+    border-bottom: 2px solid  #41B883 !important;
 }
 
 .app-nav a:last-child {
