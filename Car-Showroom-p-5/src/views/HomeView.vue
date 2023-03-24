@@ -4,19 +4,15 @@
       <button class="add_btn" id="add" @click="set_btn_txt('', $event)">
         Add Car
       </button>
-      <!-- <button class="add_btn" id="add" @click="deletee">
-        delete
-      </button> -->
     </div>
     <car_form
       v-if="car_popup_toggle"
       :btn_txt="form_btn_txt"
-      :length="cars.length"
       :id="edit_car_id"
       @add_car="add_car"
       @edit_car="edit_car"
       @toggle_popup="toggle_popup"
-    ></car_form>
+    />
     <div class="content_container">
       <div class="car-card" v-for="car in cars" :key="car.id">
         <card
@@ -30,8 +26,8 @@
   </section>
 </template>
 <script>
-import card from "../components/Gallery_card.vue";
-import car_form from "../components/Car_form.vue";
+import card from "../components/GalleryCard.vue";
+import car_form from "../components/CarForm.vue";
 
 export default {
   components: { card, car_form },
@@ -113,10 +109,6 @@ export default {
           });
       }
     },
-    // deletee(){
-    //   this.axios
-    //       .delete("https://testapi.io/api/dartya/resource/users/" + 199)
-    // }
   },
   created() {
     this.getData();
@@ -131,6 +123,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color:#34495E;
 }
 
 body {
@@ -147,8 +140,8 @@ body {
 
 .add_btn {
   width: 100px;
-  border: 1px solid #00a2ff;
-  background-color: #00a2ff;
+  border: 1px solid #41B883;
+  background-color: #41B883;
   color: #ffff;
   padding: 5px;
   font-size: 15px;
@@ -159,7 +152,9 @@ body {
 
 .add_btn:hover {
   transition: all 0.2s ease-out;
-  border: 1px solid #000000;
+  background-color: transparent;
+  color: #41B883;
+  border: 1px solid #41B883;
 }
 
 .gallery_display {
@@ -192,6 +187,4 @@ body {
   padding: 0;
 }
 }
-
-
 </style>
