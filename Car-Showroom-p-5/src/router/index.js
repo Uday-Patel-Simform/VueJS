@@ -31,6 +31,4 @@ const router = createRouter({
   linkExactActiveClass: 'active_nav_link'
 })
 
-// console.log(data.data().is_logged_in);
-
 export default router
