@@ -185,7 +185,12 @@ p {
     background-color: transparent;
     border: 2px solid #000000;
 }
-
+@media (max-width: 700px) {
+    .gallery_card {
+        width: 70%;
+        margin: 10px 0;
+    }
+}
 @media (max-width: 400px) {
     .gallery_card {
         width: 100%;
