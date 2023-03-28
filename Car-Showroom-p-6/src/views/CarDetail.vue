@@ -8,28 +8,30 @@
                 </svg>Back
             </router-link>
         </div>
-        <section class="car-details-container">
-            <div class="info-container">
-                <div class="img-container">
-                    <img :src="car.image" :alt="car.name">
+        <transition name="details-card" appear>
+            <section class="car-details-container">
+                <div class="info-container">
+                    <div class="img-container">
+                        <img :src="car.image" :alt="car.name">
+                    </div>
+                    <div class="detail-container">
+                        <div class="car-name">
+                            <h1>
+                                {{ car.name }}
+                            </h1>
+                        </div>
+                        <div class="car-desc">
+                            <h2>Car details:</h2>
+                            <p>{{ car.details }}</p>
+                        </div>
+                        <div class="car-price">
+                            <h2>Car price:</h2>
+                            <p>{{ car.price }}/-</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="detail-container">
-                    <div class="car-name">
-                        <h1>
-                            {{ car.name }}
-                        </h1>
-                    </div>
-                    <div class="car-desc">
-                        <h2>Car details:</h2>
-                        <p>{{ car.details }}</p>
-                    </div>
-                    <div class="car-price">
-                        <h2>Car price:</h2>
-                        <p>{{ car.price }}/-</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </transition>
     </section>
 </template>
 
@@ -57,13 +59,14 @@ export default {
 </script>
 
 <style scoped>
-section{
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 .back-btn {
     z-index: 1;
     margin-top: -20px;
@@ -140,6 +143,14 @@ align-items: center;
 .car-desc p,
 .car-price p {
     font-size: 1vw;
+}
+
+.details-card-enter-from{
+    opacity: 0;
+    transform: translateY(100px);
+}
+.details-card-enter-active{
+    transition: all 0.5s ease;
 }
 
 @media (max-width:1200px) {
@@ -251,4 +262,5 @@ align-items: center;
     .car-price p {
         font-size: 4vw;
     }
-}</style>
+}
+</style>
