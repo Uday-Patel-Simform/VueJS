@@ -35,7 +35,7 @@
 </template>
 <script>
 export default {
-    props: [ "id", "btn_txt"],
+    props: ["id", "btn_txt"],
     emits: ["add_car", "toggle_popup", "edit_car"],
     data() {
         return {
