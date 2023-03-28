@@ -112,7 +112,7 @@ export default {
       gsap.to(e,{
         opacity:1,
         y: 0,
-        duration: 0.2,
+        duration: 0.5,
         onComplete: done,
         delay: e.dataset.index * 0.1
       })
@@ -122,7 +122,7 @@ export default {
         opacity:0,
         y: -300,
         scale: 0,
-        duration: 0.5,
+        duration: 0.3,
         onComplete: done,
       })
     }
@@ -195,7 +195,7 @@ body {
   align-items: center;
 }
 
-.popup-enter-from {
+/* .popup-enter-from {
   opacity: 0;
   transform: scale(0);
 }
@@ -208,6 +208,37 @@ body {
 .popup-leave-to {
   opacity: 0;
   transform: scale(0);
+} */
+
+.popup-enter-active,
+.popup-leave-active {
+    transition: all 0.5s ease;
+}
+
+.popup-leave-active {
+    transition-delay: 0.5s;
+    transition: all 0.5s ease;
+}
+
+.popup-enter-from,
+.popup-leave-to {
+    transform: translateY(-500px);
+    opacity: 0;
+}
+
+.popup-enter-active .car-form-popup,
+.popup-leave-active .car-form-popup {
+    transition: all 0.3s ease-in-out;
+}
+
+.popup-enter-active .car-form-popup {
+    transition-delay: 0.25s;
+}
+
+.popup-enter-from .car-form-popup,
+.popup-leave-to .car-form-popup {
+    transform: translateY(300px);
+    opacity: 0;
 }
 
 .cards-leave-active {
@@ -215,7 +246,7 @@ body {
 }
 
 .cards-move {
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in;
 }
 
 @media (max-width:1600px) {
@@ -256,7 +287,7 @@ body {
   }
 }
 
-@media (max-width:800px) {
+@media (max-width:700px) {
   .content_container {
     grid-template-columns: repeat(1, 1fr);
   }
