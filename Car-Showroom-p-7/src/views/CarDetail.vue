@@ -46,8 +46,8 @@ export default {
         }
     },
     computed:{
-        ...mapState(useCarStore,['getCarByID']),
-        ...mapWritableState(useCarStore,['carID','car'])
+        ...mapState(useCarStore,['getCarByID','car']),
+        ...mapWritableState(useCarStore,['carID'])
     },
     async created() {
         this.carID = this.$route.params.id
