@@ -2,7 +2,7 @@
   <section class="gallery_display">
 
     <div class="add_btn_container">
-      <button class="add_btn" id="add" @click="this.setBtnTxt($event)">
+      <button class="add_btn" id="add" @click="setBtnTxt($event)">
         Add Car
       </button>
     </div>
@@ -11,7 +11,7 @@
     </transition>
     <div class="content_container">
       <transition-group name="cards" @before-enter="beforeEnter" @enter="enter" @leave="leave">
-        <div class="car-card" v-for="(car, index) in this.cars" :key="car.id" :data-index="index">
+        <div class="car-card" v-for="(car, index) in cars" :key="car.id" :data-index="index">
           <card :car="car"/>
         </div>
       </transition-group>
