@@ -12,21 +12,21 @@
             <section class="car-details-container">
                 <div class="info-container">
                     <div class="img-container">
-                        <img :src="this.car.image" :alt="this.car.name">
+                        <img :src="this.car.image" :alt="car.name">
                     </div>
                     <div class="detail-container">
                         <div class="car-name">
                             <h1>
-                                {{ this.car.name }}
+                                {{ car.name }}
                             </h1>
                         </div>
                         <div class="car-desc">
                             <h2>Car details:</h2>
-                            <p>{{ this.car.details }}</p>
+                            <p>{{ car.details }}</p>
                         </div>
                         <div class="car-price">
                             <h2>Car price:</h2>
-                            <p>{{ this.car.price }}/-</p>
+                            <p>{{ car.price }}/-</p>
                         </div>
                     </div>
                 </div>
