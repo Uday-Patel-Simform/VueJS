@@ -11,11 +11,11 @@ export const useCarStore = defineStore('CarStore', {
         url: "https://testapi.io/api/dartya/resource/cardata/",
     }),
     getters: {
-        async getCarByID() {
-            this.car = {}
+        getCarByID: async(state) => {
+            state.car = {}
             try {
-                const res = await axios.get(this.url + this.carID)
-                this.car = res.data
+                const res = await axios.get(state.url + state.carID)
+                state.car = res.data
                 return
             } catch (e) {
                 alert(e.message)
