@@ -1,4 +1,4 @@
-# Car-showroom-p-6
+# Car-showroom-p-7
 
 This a car-showroom app which has basic CRUD functions, routing capabilities of SPA and user registration and login functionalities, and state management is added using pinia<br>
 Live demo: https://fantastic-puffpuff-cd641e.netlify.app/
