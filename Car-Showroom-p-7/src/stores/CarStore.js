@@ -32,15 +32,6 @@ export const useCarStore = defineStore('CarStore', {
                 alert(e.message)
             }
         },
-        async getCarData() {
-            try {
-                const res = await axios.get(this.url + this.carID)
-                this.car = res.data
-                return
-            } catch (e) {
-                alert(e.message)
-            }
-        },
         togglePopup() {
             this.isVisiblePopup = !this.isVisiblePopup;
             this.car = {}
