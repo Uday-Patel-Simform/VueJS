@@ -1,4 +1,4 @@
-# Car-showroom-p-5
+# Car-showroom-p-6
 
 This a car-showroom app which has basic CRUD functions, routing capabilities of SPA and user registration and login functionalities, and added page transitions and other animations<br>
 Live demo: https://superb-gelato-5dd692.netlify.app/
