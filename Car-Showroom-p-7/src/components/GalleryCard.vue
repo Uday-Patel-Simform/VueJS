@@ -14,7 +14,7 @@
                 INFO
             </router-link>
             <div class="edit_delete_btn_container">
-                <button type="button" class="car-edit-btn" id="edit" @click="this.setBtnTxt($event,car.id)">
+                <button type="button" class="car-edit-btn" id="edit" @click="setBtnTxt($event,car.id)">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512">
                         <path
