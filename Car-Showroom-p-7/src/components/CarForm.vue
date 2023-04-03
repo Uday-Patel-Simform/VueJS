@@ -1,8 +1,8 @@
 <template>
-    <div class="popup" @click="this.togglePopup">
+    <div class="popup" @click="togglePopup">
         <div class="car-form-popup" @click.stop>
             <div class="close_btn">
-                <button class="close" @click="this.togglePopup">x</button>
+                <button class="close" @click="togglePopup">x</button>
             </div>
             <form @submit.prevent="handleSubmit">
                 <div class="car_name form_fields">
@@ -24,7 +24,7 @@
                 </div>
                 <p class="vAlert" v-if="isValid" v-html="validationAlert"></p>
                 <div class="btn_container">
-                    <button class="btn" type="submit">{{ this.formBtnTxt }}</button>
+                    <button class="btn" type="submit">{{ formBtnTxt }}</button>
                 </div>
             </form>
         </div>
