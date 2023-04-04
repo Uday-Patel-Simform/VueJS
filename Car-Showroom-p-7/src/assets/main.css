@@ -119,15 +119,17 @@
 
 .form-container {
   width: 90%;
-  top: 0;
+  top: 100px;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 83vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 50px;
+}
+.login-form{
+  height: 83vh;
 }
 .form-container form {
   border: 1px solid #c5c5c5;
