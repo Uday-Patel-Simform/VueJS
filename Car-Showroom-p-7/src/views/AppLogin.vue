@@ -1,5 +1,5 @@
 <template>
-    <section class="form-container">
+    <section class="form-container login-form">
         <form @submit.prevent="handel_submit">
             <div class="form_title">
                 <h2>Login</h2>
