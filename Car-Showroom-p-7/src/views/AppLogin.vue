@@ -32,9 +32,9 @@ export default {
     methods:{
         check_required() {
             if (!this.$refs.email.value) {
-                return this.displayAlert(this.$refs.email, " is required*");
+                return this.store.displayAlert(this.$refs.email, " is required*");
             } else if (!this.$refs.password.value) {
-                return this.displayAlert(this.$refs.password, " is required*");
+                return this.store.displayAlert(this.$refs.password, " is required*");
             } else {
                 return true;
             }
@@ -47,6 +47,7 @@ export default {
     },
     created(){
         this.store=useUserStore()
+        this.store.$reset()
     }
 }
 </script>
