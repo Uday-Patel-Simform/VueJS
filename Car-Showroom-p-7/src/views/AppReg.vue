@@ -96,7 +96,9 @@ export default {
             } else this.store.removeAlert(e.target)
         },
         checkRequired() {
-            if (!this.$refs.email.value) {
+            if (!this.$refs.name.value) {
+                return this.store.displayAlert(this.$refs.name, " is required*");
+            } else if (!this.$refs.email.value) {
                 return this.store.displayAlert(this.$refs.email, " is required*");
             } else if (!this.$refs.password.value) {
                 return this.store.displayAlert(this.$refs.password, " is required*");
@@ -122,6 +124,7 @@ export default {
     },
     created(){
         this.store = useUserStore()
+        this.store.$reset()
     }
 }
 </script>
