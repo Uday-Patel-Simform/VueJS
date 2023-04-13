@@ -1,7 +1,7 @@
-# Car-showroom-p-8
+# Car-showroom-p-9
 
-This a car-showroom app which has basic CRUD functions, routing capabilities of SPA, user registration and login functionalities, state management is added using pinia, and user authentication<br>
-Live demo: https://radiant-pegasus-6fa6d3.netlify.app/login
+Added different environment variables that can be used with different build modes like production, staging and development.<br>
+Live demo: https://stellular-raindrop-17a186.netlify.app/login
 
 ## Recommended IDE Setup
 
