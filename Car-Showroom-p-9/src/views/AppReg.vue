@@ -14,7 +14,8 @@
             </div>
             <div class="form_fields">
                 <label for="password">Password:</label>
-                <input type="password" id="password" ref="password" v-model="user.password" @change="store.isValidPassword" />
+                <input type="password" id="password" ref="password" v-model="user.password"
+                    @change="store.isValidPassword" />
             </div>
             <div class="form_fields">
                 <label for="confirm-password">Confirm Password:</label>
@@ -33,11 +34,11 @@
                 <label for="gender">Gender:</label>
                 <div class="radio" ref="gender" id="gender">
                     <div class="radio_ip">
-                        <input type="radio" id="male" value="male" v-model="user.gender" />
+                        <input type="radio" id="male" value="male" v-model="user.gender" @change="isGender"/>
                         <label for="male" class="radio_label">Male</label>
                     </div>
                     <div class="radio_ip">
-                        <input type="radio" id="female" value="female" v-model="user.gender" />
+                        <input type="radio" id="female" value="female" v-model="user.gender" @change="isGender"/>
                         <label for="two" class="radio_label">Female</label>
                     </div>
                 </div>
@@ -55,7 +56,7 @@
                 <button class="btn" type="submit">Register</button>
             </div>
             <div class="btn_container">
-                <p>Already have an account? <router-link :to="{name : 'login'}">Login</router-link> here.</p>
+                <p>Already have an account? <router-link :to="{ name: 'login' }">Login</router-link> here.</p>
             </div>
         </form>
     </section>
@@ -66,7 +67,7 @@ import { useUserStore } from '../stores/UserStore'
 export default {
     data() {
         return {
-            store:null,
+            store: null,
             user: {},
         }
     },
@@ -91,6 +92,14 @@ export default {
                 this.store.displayAlert(e.target, " must be a numeric value*");
             } else {
                 this.store.removeAlert(e.target);
+            }
+        },
+        isGender(e) {
+            if (!this.user.gender) {
+                this.store.displayAlert(this.$refs.gender, ' must be selected*')
+            } else {
+                this.store.removeAlert(this.$refs.gender);
+                this.$refs.gender.style.border = 'none'
             }
         },
         is_date(e) {
@@ -125,7 +134,7 @@ export default {
             }
         }
     },
-    created(){
+    created() {
         this.store = useUserStore()
         this.store.$reset()
     }
