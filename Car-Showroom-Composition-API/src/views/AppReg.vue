@@ -18,8 +18,8 @@
                     @change="store.isValidPassword" />
             </div>
             <div class="form_fields">
-                <label for="ConfirmPassword">Confirm Password:</label>
-                <input type="password" id="ConfirmPassword" @change="check_cnf_password" />
+                <label for="Confirm_Password">Confirm Password:</label>
+                <input type="password" id="Confirm_Password" @change="check_cnf_password" />
             </div>
             <div class="form_fields">
                 <label for="role">Role:</label>
@@ -49,7 +49,7 @@
             </div>
             <div class="form_fields">
                 <label for="dob">Date Of Birth:</label>
-                <input type="date" id="dob" v-model="user.dob" />
+                <input type="date" id="dob" v-model="user.dob" @change="isDate"/>
             </div>
             <p v-if="!store.isValid" class="vAlert" v-html="store.vAlert"></p>
             <div class="btn_container">
@@ -75,9 +75,9 @@ function is_string() {
     } else store.removeAlert(Name)
 }
 function check_cnf_password() {
-    if (user.password !== ConfirmPassword.value) {
-        store.displayAlert(ConfirmPassword, ' must be same as password*')
-    } else store.removeAlert(ConfirmPassword)
+    if (user.password !== Confirm_Password.value) {
+        store.displayAlert(Confirm_Password, ' must be same as password*')
+    } else store.removeAlert(Confirm_Password)
 }
 function check_role() {
     if (role.value === '') {
@@ -93,11 +93,18 @@ function is_number(e) {
 }
 function isGender() {
     if (!user.gender) {
-        console.log(gender);
         store.displayAlert(gender, ' must be selected*')
     } else {
         store.removeAlert(gender);
         gender.style.border = 'none'
+    }
+}
+function isDate() {
+    if (!user.dob) {
+        console.log(dob);
+        store.displayAlert(dob, ' must be selected*')
+    } else {
+        store.removeAlert(dob)
     }
 }
 function checkRequired() {
@@ -107,8 +114,8 @@ function checkRequired() {
         return store.displayAlert(email, " is required*");
     } else if (!password.value) {
         return store.displayAlert(password, " is required*");
-    } else if (!ConfirmPassword.value) {
-        return store.displayAlert(ConfirmPassword, " is required*");
+    } else if (!Confirm_Password.value) {
+        return store.displayAlert(Confirm_Password, " is required*");
     } else if (!role.value) {
         return store.displayAlert(role, " is required*");
     } else if (!user.gender) {

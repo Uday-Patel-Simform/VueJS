@@ -6,20 +6,20 @@
             </div>
             <form @submit.prevent="handleSubmit">
                 <div class="car_name form_fields">
-                    <label class="ip_title" for="carName">Car Name: </label>
-                    <input id="carName" v-model="carObj.name" @input="isString" />
+                    <label class="ip_title" for="Name">Car Name: </label>
+                    <input id="Name" v-model="carObj.name" @input="isString" />
                 </div>
                 <div class="car_description form_fields">
-                    <label class="ip_title" for="carDescription">Short Description:</label>
-                    <textarea id="carDescription" v-model="carObj.details" @input="checkDescLength"></textarea>
+                    <label class="ip_title" for="Description">Short Description:</label>
+                    <textarea id="Description" v-model="carObj.details" @input="checkDescLength"></textarea>
                 </div>
                 <div class="car_img form_fields">
-                    <label class="ip_title" for="carImage">Image: </label>
-                    <input id="carImage" v-model="carObj.image" @input="isImgUrl" />
+                    <label class="ip_title" for="image">Image: </label>
+                    <input id="image" v-model="carObj.image" @input="isImgUrl" />
                 </div>
                 <div class="car_price form_fields">
-                    <label class="ip_title" for="carPrice">Price:</label>
-                    <input id="carPrice" v-model="carObj.price" @input="isNumber" />
+                    <label class="ip_title" for="Price">Price:</label>
+                    <input id="Price" v-model="carObj.price" @input="isNumber" />
                 </div>
                 <p class="vAlert" v-if="isValid" v-html="validationAlert"></p>
                 <div class="btn_container">
@@ -66,14 +66,14 @@ function checkDescLength(e) {
         displayAlert(
             e.target,
             " must be at lest 30 characters you are only using " +
-            carDescription.value.length +
+            Description.value.length +
             " characters*"
         )
     } else if (e.target.value.length > 120) {
         displayAlert(
             e.target,
             " must not exceed 120 characters you are using " +
-            carDescription.value.length +
+            Description.value.length +
             " characters*"
         )
     } else {
@@ -101,12 +101,12 @@ function isNumber(e) {
     }
 }
 function validateForm() {
-    if (!carName.value) {
-        return displayAlert(carName, " is required*")
-    } else if (!carDescription.value) {
-        return displayAlert(carDescription, " is required*")
-    } else if (!carImage.value) {
-        return displayAlert(carImage, " is required*")
+    if (!Name.value) {
+        return displayAlert(Name, " is required*")
+    } else if (!Description.value) {
+        return displayAlert(Description, " is required*")
+    } else if (!image.value) {
+        return displayAlert(image, " is required*")
     } else {
         return true
     }

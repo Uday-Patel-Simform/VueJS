@@ -12,7 +12,8 @@ export const useUserStore = defineStore("UserStore", {
     displayAlert(el, msg) {
       this.isValid = false;
       el.style.border = "1px solid red";
-      this.vAlert = el.id + msg;
+      console.log(el.id.split('_').join(' '));
+      this.vAlert = el.id.split('_').join(' ') + msg;
       return false;
     },
     removeAlert(el) {
