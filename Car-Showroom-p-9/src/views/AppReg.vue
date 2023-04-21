@@ -103,8 +103,12 @@ export default {
             }
         },
         is_date(e) {
+            const today = new Date().getTime()
+            const userDOB = new Date(e.target.value)
             if (e.target.value === '') {
                 this.store.displayAlert(e.target, ' must be selected*')
+            } else if (today < userDOB.getTime()) {
+                this.store.displayAlert(dob, " can't be in future*")
             } else this.store.removeAlert(e.target)
         },
         checkRequired() {
