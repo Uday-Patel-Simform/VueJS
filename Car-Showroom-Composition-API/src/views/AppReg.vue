@@ -100,9 +100,12 @@ function isGender() {
     }
 }
 function isDate() {
+    const today = new Date().getTime()
+    const userDOB = new Date(user.dob)
     if (!user.dob) {
-        console.log(dob);
         store.displayAlert(dob, ' must be selected*')
+    } else if (today < userDOB.getTime()) {
+        store.displayAlert(dob, " can't be in future*")
     } else {
         store.removeAlert(dob)
     }
