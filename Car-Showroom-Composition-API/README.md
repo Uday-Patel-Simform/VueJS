@@ -1,7 +1,7 @@
-# Car-showroom-p-8
+# Car-showroom-Composition-API
 
 This a car-showroom app which has basic CRUD functions, routing capabilities of SPA, user registration and login functionalities, state management is added using pinia, and user authentication<br>
-Live demo: https://radiant-pegasus-6fa6d3.netlify.app/login
+Live demo: https://csp-comp-api.netlify.app
 
 ## Recommended IDE Setup
 
