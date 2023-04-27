@@ -9,9 +9,7 @@ app.use(bodyParser.json());
 
 async function fetchData() {
   try {
-    const response = await axios.get(
-      import.meta.env.VITE_USER_API_URL
-    );
+    const response = await axios.get('https://testapi.io/api/dartya/resource/users');
     const users = response.data.data;
     return users;
   } catch (error) {
