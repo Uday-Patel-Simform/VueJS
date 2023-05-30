@@ -1,6 +1,6 @@
-# Nuxt 3 practical-10
+# Nuxt 3 Minimal Starter
 
-Live demo: https://storied-entremet-452261.netlify.app/
+live demo : https://storied-entremet-452261.netlify.app/
 
 ## Setup
 
